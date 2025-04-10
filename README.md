@@ -6,7 +6,6 @@ Image Compression using Quadtree adalah program kompresi gambar berbasis Java ya
 
 ### Prasyarat
 - Java Development Kit (JDK) 8+
-- Gambar input dalam format JPEG/PNG
 
 ### Langkah-langkah
 **Clone Repository**
@@ -25,7 +24,7 @@ cd bin
 java ImageCompression
 ```
 
-## 📥 Input Parameter
+## Masukan
 Program akan meminta input berikut secara interaktif:
 
 | Parameter | Contoh | Keterangan |
@@ -35,17 +34,21 @@ Program akan meminta input berikut secara interaktif:
 | Ambang batas | `25` | Variansi/MAD: 0-100<br>MaxDiff: 0-255<br>Entropy: 0-8 |
 | Ukuran blok minimum | `8` | 4, 8, 16 |
 | Alamat output | `result/compressed.jpg` | Path untuk gambar terkompresi |
-| Alamat output GIF | `result/process.gif` | Opsional (visualisasi proses) |
+| Alamat output GIF | `result/process.gif` | Opsional |
 
-## 📊 Output
+## Keluaran
 Program akan menghasilkan:
-- Gambar terkompresi dalam format JPEG
-- **Metrik kinerja**:
+- Gambar terkompresi dalam format .jpg
+- Waktu eksekusi
+- Ukuran gambar
+- Kedalaman pohon
+- Presentase kompresi
+- Jumlah simpul
 - File GIF (opsional) yang menampilkan proses pembagian Quadtree
 
 ---
 
-✒️ **Author**  
+**Author**  
 Rendi Adinata  
 NIM: 10123083  
 Kelas: K1
