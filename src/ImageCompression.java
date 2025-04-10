@@ -18,8 +18,7 @@ public class ImageCompression {
                 System.err.println("Error: Alamat gambar tidak valid atau file tidak ditemukan.");
                 return;
             }
-            
-            // Coba membaca gambar
+            // take and validate user input
             BufferedImage image = ImageIO.read(imageFile);
             if (image == null) {
                 System.err.println("Error: File yang diberikan bukan file gambar yang dapat dikenali.");
@@ -75,7 +74,7 @@ public class ImageCompression {
                 gifOutputPath = replaceExtension(gifOutputPath, "gif");
             }
             
-            // Memilih kalkulator galat
+            
             ErrorCalculator errorCalculator;
             switch (method) {
                 case 1: 
@@ -95,19 +94,18 @@ public class ImageCompression {
                     return;
             }
             
-            // Proses kompresi
+            // proses kompresi
             long startTime = System.currentTimeMillis();
             QuadTree quadTree = new QuadTree(image, errorCalculator, threshold, minBlockSize);
             BufferedImage compressedImage = quadTree.createCompressedImage();
             long endTime = System.currentTimeMillis();
             
-            // Menyimpan gambar terkompresi
+            // simpan
             if (!ImageIO.write(compressedImage, "jpg", new File(outputPath))) {
                 System.err.println("Error: Gagal menulis gambar ke " + outputPath);
                 return;
             }
             
-            // Mengambil ukuran file asli dan terkompresi
             long originalSize = imageFile.length();
             long compressedSize = new File(outputPath).length();
             
@@ -118,7 +116,7 @@ public class ImageCompression {
             System.out.println("Tree depth: " + quadTree.getMaxDepth());
             System.out.println("Node count: " + quadTree.getNodeCount());
             
-            // Proses pembuatan GIF jika alamat output GIF tidak kosong
+            
             if (!gifOutputPath.isEmpty()) {
                 List<BufferedImage> frames = new ArrayList<>();
                 for (int depth = 0; depth <= quadTree.getMaxDepth(); depth++) {
