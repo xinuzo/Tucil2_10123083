@@ -48,7 +48,7 @@ Program akan menghasilkan:
 
 ---
 
-**Author**  
+## Author 
 Rendi Adinata  
 NIM: 10123083  
 Kelas: K1
