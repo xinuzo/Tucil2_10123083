@@ -11,7 +11,7 @@ Image Compression using Quadtree adalah program kompresi gambar berbasis Java ya
 **Clone Repository**
 ```bash
 git clone https://github.com/xinuzo/Tucil2_10123083.git
-cd image-compression-quadtree/src
+cd Tucil2_10123083/src
 ```
 **Kompilasi Program**
 ```bash
