@@ -7,7 +7,7 @@ Image Compression dengan Quadtree adalah program kompresi gambar berbasis Java y
 ### Prasyarat
 - Java Development Kit (JDK) 8+
 
-### Langkah-langkah
+### Cara Menjalankan Program
 **Clone Repository**
 ```bash
 git clone https://github.com/xinuzo/Tucil2_10123083.git
